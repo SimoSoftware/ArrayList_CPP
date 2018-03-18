@@ -120,45 +120,6 @@ void ArrayList<T>::add(int index, T element){
 		}
 	}
 }
-/*template <class T>
-void ArrayList<T>::add(int index, T element){
-	int actualSize = this->length;
-	if(index==this->elements-1 && this->length!=this->elements){
-		this->array[this->elements] = element;
-		this->elements++;
-	}else if(index==this->elements-1 && this->length==this->elements){
-		this->estendi();
-		this->array[this->elements] = element;
-		this->elements++;
-	}else if(index < this->elements-1 && this->length!=this->elements){
-		this->appo = this->array;
-		this->array[index] = element;
-		for(int i=index+1; i<this->elements+1; i++)
-			this->array[i] = this->appo[i-1];
-		this->elements++;
-	}else if(index < this->elements-1 && this->length==this->elements){
-		this->appo = this->array;
-		this->array = new T[this->length+10];
-		this->length += 10;
-		for(int i=0; i<actualSize; i++)
-			this->array[i] = this->appo[i];
-		this->add(index, element);
-	}else if(index > this->elements-1 && index<this->elements-1){
-		this->array[index] = element;
-	}else if(index > this->elements-1 && index>=this->elements-1){
-		this->appo = this->array;
-		if(index<this->length+10){
-			this->array = new T[this->length+10];
-			this->length += 10;
-		}else{
-			this->array = new T[index+1];
-			this->length = index+1;
-		}
-		for(int i=0; i<actualSize; i++)
-			this->array[i] = this->appo[i];
-		this->array[index] = element;
-	}
-}*/
 template <class T>
 void ArrayList<T>::add(ArrayList<T>& ar){
 	T* pippo = ar.toArray();
